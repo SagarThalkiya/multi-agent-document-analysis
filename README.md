@@ -12,7 +12,7 @@ A FastAPI-based multi-agent document analysis system that processes PDF and TXT 
 - **Async Background Processing** - FastAPI `BackgroundTasks` for non-blocking API responses
 - **Robust Job Tracking** - In-memory state management with per-agent timing, completion counts, and error handling
 - **PDF/TXT Support** - Document parsing with `pdfplumber` and size/type validation (max 10MB)
-- **Comprehensive Testing** - 28 unit and integration tests covering all agents and parallel execution verification
+- **Comprehensive Testing** - 10 unit and integration tests covering all agents and parallel execution verification
 - **HTML/CSS/JavaScript Frontend** - Clean, functional UI for document upload, analysis triggering, and results display
 
 ### Prerequisites
@@ -108,7 +108,7 @@ curl http://localhost:8000/results/abc123
 The project includes comprehensive unit tests for all agents and parallel execution verification:
 
 ```bash
-# Run all tests (28 tests total)
+# Run all tests (10 tests total)
 backend\.venv\Scripts\python -m pytest backend\test_agents.py backend\test_api.py backend\test_parallel_execution.py -v
 
 # Run only agent unit tests
