@@ -2,6 +2,9 @@
 
 A FastAPI-based multi-agent document analysis system that processes PDF and TXT files using three specialized AI agents working in **true parallel execution**. The system provides structured insights including summaries, entity extraction, and sentiment analysis.
 
+### Demo
+- [Project walkthrough (Loom)](https://www.loom.com/share/6366581ea59a45b483a224ddad50e464)
+
 ### Features
 - **True Parallel Agent Execution** - All three agents execute simultaneously using `asyncio.gather()`, ensuring total time ≈ slowest agent (not sum of all agents)
 - **LLM-Powered Analysis** - Integrated with Groq API (free tier) using LangChain for intelligent document processing
