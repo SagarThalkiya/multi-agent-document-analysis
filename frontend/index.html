@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Agent Document Analyzer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Multi-Agent Document Analyzer</h1>
+      <p class="subtitle">
+        Upload a PDF or TXT file, kick off the analysis, and review each agent's output.
+      </p>
+
+      <section class="card">
+        <h2>1. Upload Document</h2>
+        <form id="upload-form">
+          <label for="document" class="file-input">
+            <input id="document" name="file" type="file" accept=".pdf,.txt" required />
+          </label>
+          <button type="submit">Upload</button>
+        </form>
+        <p id="upload-feedback" class="feedback"></p>
+      </section>
+
+      <section class="card">
+        <h2>2. Trigger Analysis</h2>
+        <div class="analysis-controls">
+          <input id="job-id" type="text" placeholder="Job ID from upload" readonly />
+          <button id="start-analysis" disabled>Start Analysis</button>
+        </div>
+        <p id="analysis-feedback" class="feedback"></p>
+      </section>
+
+      <section class="card results-section">
+        <div class="results-header">
+          <h2>3. Results</h2>
+          <span id="status-badge" class="status-badge">idle</span>
+        </div>
+        <div id="timing"></div>
+
+        <div class="result-block" id="summary-block">
+          <h3>Summary</h3>
+          <p id="summary-text">No data yet.</p>
+          <ul id="summary-points"></ul>
+          <p id="summary-confidence"></p>
+        </div>
+
+        <div class="result-block" id="entities-block">
+          <h3>Entities</h3>
+          <div class="entity-columns">
+            <div>
+              <h4>People</h4>
+              <ul id="people-list"></ul>
+            </div>
+            <div>
+              <h4>Organizations</h4>
+              <ul id="orgs-list"></ul>
+            </div>
+            <div>
+              <h4>Dates</h4>
+              <ul id="dates-list"></ul>
+            </div>
+            <div>
+              <h4>Locations</h4>
+              <ul id="locations-list"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-block" id="sentiment-block">
+          <h3>Sentiment</h3>
+          <p id="sentiment-text"></p>
+          <ul id="sentiment-phrases"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
+

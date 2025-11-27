@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+.venv/
+venv/
+
+# FastAPI uploads
+uploads/
+
+# Node
+node_modules/
+
+# Environment
+.env
+*.env
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+.venv
+.env
+uploads
+   .pytest_cache
+__pycache__
